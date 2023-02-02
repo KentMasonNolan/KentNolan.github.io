@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
-/*
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -100,7 +95,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
+		color: #EEEEEE;
 		font-weight: 300;
 		font-size: 13pt;
 	}
@@ -124,7 +119,7 @@ input, select, textarea {
 
 	b, strong {
 		font-weight: 600;
-		color: #3e3e3e;
+		color: #00ADB5;
 	}
 
 	i, em {
@@ -150,7 +145,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #c3c3c3;
+		color: #EEEEEE;
 		margin: 0 0 0.75em 0;
 	}
 
@@ -1686,7 +1681,7 @@ input, select, textarea {
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #37351f;
+		background-color: #00ADB5;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
 		max-width: 24em;
@@ -1697,7 +1692,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #37351f;
+			background-color: #00ADB5;
 			color: #fff !important;
 		}
 
@@ -1706,7 +1701,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #37351f;
+			background-color: #00ADB5;
 			top: 1px;
 		}
 
@@ -1912,7 +1907,7 @@ input, select, textarea {
 
 	.box {
 		background: rgb(179, 177, 177);
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(192, 77, 77, 0.1);
 		text-align: center;
 		padding: 2em;
 	}
@@ -1995,21 +1990,21 @@ input, select, textarea {
 
 		.wrapper.style1 {
 			background-image: none;
-			background-color: #1F2937;
+			background-color: #222831;
 		}
 
 		.wrapper.style2 {
-			background-color: #303947;
+			background-color: #393E46;
 			text-shadow: 1px 1px 0px rgb(0, 0, 0);
 		}
 
 		.wrapper.style3 {
-			background-color: #1F2937;
+			background-color: #222831;
 			text-shadow: 1px 1px 0px rgb(0, 0, 0);
 		}
 
 		.wrapper.style4 {
-			background-color: #303030;
+			background-color: #393E46;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
 		}
@@ -2023,20 +2018,20 @@ input, select, textarea {
 			.wrapper.style4 form select,
 			.wrapper.style4 form textarea {
 				border: none;
-				background: #282828;
+				background: #222831;
 			}
 
 				.wrapper.style4 form input[type=text]:focus,
 				.wrapper.style4 form input[type=password]:focus,
 				.wrapper.style4 form select:focus,
 				.wrapper.style4 form textarea:focus {
-					background: #252525;
+					background: #222831;
 				}
 
 /* Nav */
 
 	#nav {
-		background-color: #321f37;
+		background-color: #00ADB5;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -2140,7 +2135,7 @@ input, select, textarea {
 /* Copyright */
 
 	#copyright {
-		color: #666;
+		color: rgb(159, 155, 155);
 		font-size: 1em;
 		line-height: 1em;
 		list-style: none;
