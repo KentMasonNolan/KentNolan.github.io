@@ -11,7 +11,7 @@ let sel;
 let go = false;
 
 function setup() {
-createCanvas(1600, 800);
+createCanvas(1200, 700);
 
   slider = createSlider(1, 2, 1, 0.1);
   slider.position(width +10, height - 800);
@@ -41,7 +41,7 @@ function draw() {
   background(31, 41, 55);
   build();
   if (go) {
-    heapSort(values);
+    bubbleSort(values);
     console.log(values);
   }  
   /*if (go == true && bubblesortStarted == true) {
