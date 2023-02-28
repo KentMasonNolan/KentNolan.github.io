@@ -1974,6 +1974,7 @@ input, select, textarea {
 		.box.style1 {
 			padding: 3em 2em 3.5em 2em;
 			height: auto;
+			min-height: 480px;
 		}
 
 			.box.style1 h3 {
@@ -2289,6 +2290,11 @@ input, select, textarea {
 					margin: 0 auto 2em auto;
 				}
 
+		.box.style1 {
+			height: auto !important;
+			min-height: 400px !important;
+		}
+
 	}
 
 /* Small */
@@ -2423,6 +2429,8 @@ input, select, textarea {
 
 				.box.style1 {
 					max-width: 32em;
+					height: auto !important;
+					min-height: auto !important;
 					margin-left: auto !important;
 					margin-right: auto !important;
 				}
