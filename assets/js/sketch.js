@@ -11,7 +11,9 @@ let sel;
 let go = false;
 
 function setup() {
-createCanvas(1200, 700);
+  createCanvas(1200, 700);
+
+
 
   slider = createSlider(1, 2, 1, 0.1);
   slider.position(width +10, height - 800);
