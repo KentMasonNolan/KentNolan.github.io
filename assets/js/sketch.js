@@ -9,14 +9,16 @@ let bubblesortStarted = false;
 let selectionsortStarted = false;
 let sel;
 let go = false;
+let selection = false;
 
 function setup() {
-  createCanvas(1200, 700);
+  let cnv = createCanvas(screen.width, screen.height-300);
 
+  cnv.position(0,60);
 
 
   slider = createSlider(1, 2, 1, 0.1);
-  slider.position(width +10, height - 800);
+  slider.position(width +10, -screen.height);
   slider.style('width', '80px');
   val = slider.value();
 
@@ -25,9 +27,15 @@ function setup() {
   }
   let buttonreset = createButton('Reset');
   buttonreset.mousePressed(reset);
+  buttonreset.position(0,710);
 
   let buttonGo = createButton('Go');
   buttonGo.mousePressed(() => go = true);
+  buttonGo.position(150, 710);
+
+  let buttonBubble = createButton('Selection');
+  buttonBubble.mousePressed(() => selection = true);
+  buttonBubble.position(300, 710);
 
   /*let buttonSel = createButton('Selection Sort');
   buttonSel.mousePressed(selectionSort);
@@ -42,10 +50,13 @@ function setup() {
 function draw() {
   background(31, 41, 55);
   build();
-  if (go) {
+
+  // This should be turned into a Case Select where the button sets the values of the function and the others back to 0
+    if (go === true) {
     bubbleSort(values);
-    console.log(values);
-  }  
+  // else if (selection == true); {
+  //   selectionSort(values)
+  }
   /*if (go == true && bubblesortStarted == true) {
       bubbleSort();
     }
