@@ -12,7 +12,7 @@ let go = false;
 let selection = false;
 
 function setup() {
-  let cnv = createCanvas(screen.width, screen.height-300);
+  let cnv = createCanvas(window.innerWidth-20, window.innerHeight-10);
 
   cnv.position(0,60);
 
@@ -31,7 +31,7 @@ function setup() {
 
   let buttonGo = createButton('Go');
   buttonGo.mousePressed(() => go = true);
-  buttonGo.position(150, 710);
+  buttonGo.position(150, screen.height-200);
 
   let buttonBubble = createButton('Selection');
   buttonBubble.mousePressed(() => selection = true);
