@@ -2424,7 +2424,7 @@ input, select, textarea {
 			.button {
 				text-align: center;
 				font-size: 1.2em;
-				width: 100%;
+				width: 95%;
 				padding: 1em 0 1em 0;
 			}
 
@@ -2524,7 +2524,7 @@ input, select, textarea {
 				#nav a {
 					padding: 0 0.75em;
 					height: inherit;
-					line-height: inherit;
+					line-height: 2.5em;
 					border-radius: 0;
 				}
 

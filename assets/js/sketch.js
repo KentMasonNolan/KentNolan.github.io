@@ -42,7 +42,7 @@ function windowResized() {
     values.push(floor(random(0, height)));
   }
   let buttonreset = createButton('Reset');
-  buttonreset.mousePressed(reset);
+  buttonreset.mouseClicked(reset);
   // buttonreset.position(0,710);
   buttonreset.parent('button-row');
 
