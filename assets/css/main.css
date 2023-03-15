@@ -2581,7 +2581,7 @@ html, body {
 canvas {
 	display: block;
 	width: 100% !important;
-	height: 800px !important;
+	height: 100% !important;
 }
 button-row {
 	display: block;
