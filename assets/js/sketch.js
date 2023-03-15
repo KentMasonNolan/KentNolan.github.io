@@ -30,7 +30,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-
+frameRate(20);
 
 
   slider = createSlider(1, 2, 1, 0.1);
@@ -75,7 +75,7 @@ function windowResized() {
 
 }
 
-function draw() {
+async function draw() {
   background(31, 41, 55);
   build();
 

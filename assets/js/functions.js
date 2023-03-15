@@ -67,20 +67,23 @@ function selectionSort(){
     }
 
     function heapSort(arr) {
-        let length = arr.length;
-        let lastParentNode = Math.floor(length / 2 - 1);
-        let lastChild = length - 1;
+        if (i < values.length - 1) {
+            let length = arr.length;
+            let lastParentNode = Math.floor(length / 2 - 1);
+            let lastChild = length - 1;
 
-        while (lastParentNode >= 0) {
-            heapify(arr, length, lastParentNode);
-            lastParentNode--;
+            while (lastParentNode >= 0) {
+                heapify(arr, length, lastParentNode);
+                lastParentNode--;
+            }
+            while (lastChild >= 0) {
+                [arr[0], arr[lastChild]] = [arr[lastChild], [arr[0]]];
+                heapify(arr, lastChild, 0)
+                lastChild--;
+            }
+            //return arr;
         }
-        while (lastChild >= 0) {
-            [arr[0], arr[lastChild]] = [arr[lastChild], [arr[0]]];
-            heapify(arr, lastChild, 0)
-            lastChild--;
-        }
-        //return arr;
+        i++;
     }
 
     function reset() {
