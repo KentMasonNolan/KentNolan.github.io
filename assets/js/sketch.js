@@ -2,7 +2,7 @@ let slider;
 let values = [];
 let i = 0;
 let j = 0;
-var button;
+let button;
 let boxSize;
 let sortStarted = false;
 let bubblesortStarted = false;
@@ -10,11 +10,27 @@ let selectionsortStarted = false;
 let sel;
 let go = false;
 let selection = false;
-
+let sortAlg = 0;
+let heapSortStarted = false;
 function setup() {
-  let cnv = createCanvas(window.innerWidth-20, window.innerHeight-10);
 
-  cnv.position(0,60);
+  let cnv = createCanvas(900,930);
+  cnv.parent('sketch-holder');
+function centerCanvas() {
+    var x = (windowWidth - width) / 2;
+    var y = (windowHeight - height) / 2;
+    cnv.position(x, y);
+  }
+
+function windowResized() {
+  centerCanvas();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+
 
 
   slider = createSlider(1, 2, 1, 0.1);
@@ -27,49 +43,73 @@ function setup() {
   }
   let buttonreset = createButton('Reset');
   buttonreset.mousePressed(reset);
-  buttonreset.position(0,710);
+  // buttonreset.position(0,710);
+  buttonreset.parent('button-row');
 
-  let buttonGo = createButton('Go');
-  buttonGo.mousePressed(() => go = true);
-  buttonGo.position(150, screen.height-200);
+  // let buttonGo = createButton('Go');
+  // buttonGo.mousePressed(() => go = true);
+  // // buttonGo.position(150, screen.height-200);
+  // buttonGo.parent('button-row');
+  //
+  let buttonHeap = createButton('Heap Sort');
+  buttonHeap.mousePressed(() => heapSortStarted = true);
+  buttonHeap.mousePressed(() => sortAlg = 3);
+  buttonHeap.parent('button-row');
+  console.log(sortAlg);
 
-  let buttonBubble = createButton('Selection');
-  buttonBubble.mousePressed(() => selection = true);
-  buttonBubble.position(300, 710);
 
-  /*let buttonSel = createButton('Selection Sort');
-  buttonSel.mousePressed(selectionSort);
+  let buttonSel = createButton('Selection Sort');
+  // buttonSel.mousePressed(selectionSort);
+  buttonSel.parent('button-row');
   buttonSel.mousePressed(() => selectionsortStarted = true);
+  buttonSel.mousePressed(() => sortAlg = 1);
+  console.log(sortAlg);
 
-  let buttonbub = createButton('Bubble Sort');
-  buttonbub.mousePressed(bubbleSort);
-  buttonbub.mousePressed(() => bubblesortStarted = true);
-*/
+  let buttonBub = createButton('Bubble Sort');
+  buttonBub.mousePressed(bubbleSort);
+  buttonBub.mousePressed(() => bubblesortStarted = true);
+  // buttonBub.mousePressed();
+  buttonBub.parent('button-row');
+  console.log(sortAlg);
+
+
 }
 
 function draw() {
   background(31, 41, 55);
   build();
 
-  // This should be turned into a Case Select where the button sets the values of the function and the others back to 0
-    if (go === true) {
-    bubbleSort(values);
-  // else if (selection == true); {
-  //   selectionSort(values)
+  if (selectionsortStarted === true){
+    selectionSort(values)
   }
-  /*if (go == true && bubblesortStarted == true) {
-      bubbleSort();
-    }
-  else if (go == true && selectionsortStarted == true){
-      selectionSort();
-    }
-  */}
+  if (heapSortStarted === true) {
+    heapSort(values)
+  }
+  if (bubblesortStarted === true) {
+    bubbleSort(values)
+  }
 
-function build(){
-  for(let i = 0; i < values.length; i++) {
-    fill(190)
-    strokeWeight(2);
-    stroke(0);
-    rect(i * width/values.length, height - values[i], width/values.length, values[i],2,2);
-  }
+  // switch (sortAlg) {
+  //   case 1:
+  //     bubbleSort()
+  //     go = false
+  //     break;
+  //   case 2:
+  //     selectionSort()
+  //     go = false
+  //     break;
+  //   case 3:
+  //     console.log(sortAlg)
+  //     break;
+  //
+  // }
 }
+
+      function build() {
+        for (let i = 0; i < values.length; i++) {
+          fill(190)
+          strokeWeight(2);
+          stroke(0);
+          rect(i * width / values.length, height - values[i], width / values.length, values[i], 2, 2);
+        }
+      }

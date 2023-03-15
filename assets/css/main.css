@@ -223,6 +223,19 @@ input, select, textarea {
 		max-width: calc(100% - 50px);
 		width: 1200px;
 	}
+	.sketch-holder {
+		margin: 0;
+		display: flex;
+
+		width: 100% !important;
+		height: 100px !important;
+
+		/* This centers our sketch horizontally. */
+		justify-content: center;
+
+		/* This centers our sketch vertically. */
+		align-items: center;
+	}
 
 		.container.medium {
 			width: 900px;
@@ -2567,6 +2580,13 @@ html, body {
 
 canvas {
 	display: block;
+	width: 100% !important;
+	height: 800px !important;
+}
+button-row {
+	display: block;
+	width: 100% !important;
+	height: 800px !important;
 }
 html, body {
 	margin: auto;
@@ -2753,11 +2773,12 @@ a {
 	color:#F9FAF8;
 	border-radius:5px;
 }
-.fourth-button{
+.fourth-button {
 	align-self: center;
-	padding:5px 25px 5px 25px;
-	color:#F9FAF8;
+	padding: 5px 25px 5px 25px;
+	color: #F9FAF8;
 	background-color: #3882F6;
 	border-radius: 10px;
 	border-color: #F9FAF8;
+}
 
