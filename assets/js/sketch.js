@@ -51,7 +51,7 @@ function windowResized() {
   // // buttonGo.position(150, screen.height-200);
   // buttonGo.parent('button-row');
   //
-  let buttonHeap = createButton('Heap Sort');
+  let buttonHeap = createButton('Don&#180;t push');
   buttonHeap.mousePressed(() => heapSortStarted = true);
   buttonHeap.mousePressed(() => sortAlg = 3);
   buttonHeap.parent('button-row');
