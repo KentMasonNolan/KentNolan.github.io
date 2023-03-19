@@ -51,11 +51,11 @@ frameRate(20);
   // // buttonGo.position(150, screen.height-200);
   // buttonGo.parent('button-row');
   //
-  let buttonHeap = createButton('Don&#180;t push (seriously)');
-  buttonHeap.mousePressed(() => heapSortStarted = true);
-  buttonHeap.mousePressed(() => sortAlg = 3);
-  buttonHeap.parent('button-row');
-  console.log(sortAlg);
+  // let buttonHeap = createButton('Don&#180;t push (seriously)');
+  // buttonHeap.mousePressed(() => heapSortStarted = true);
+  // buttonHeap.mousePressed(() => sortAlg = 3);
+  // buttonHeap.parent('button-row');
+  // console.log(sortAlg);
 
 
   let buttonSel = createButton('Selection Sort');
